@@ -10,7 +10,12 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <FeedbackOptionsContainer>
       {options.map(name => (
         <FeedbackOption key={name}>
-          <Button key={name} color={name} onClick={() => onLeaveFeedback(name)}>
+          <Button
+            key={name}
+            color={name}
+            value={name}
+            onClick={onLeaveFeedback}
+          >
             {name}
           </Button>
         </FeedbackOption>
